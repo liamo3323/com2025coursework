@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  availability: MyString
+  volumeNum: 1
+  owner: MyString
+  borrower: MyString
+  value: 1
+
+two:
+  title: MyString
+  availability: MyString
+  volumeNum: 1
+  owner: MyString
+  borrower: MyString
+  value: 1

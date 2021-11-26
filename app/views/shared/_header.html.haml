@@ -1,0 +1,22 @@
+
+
+%nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      %a.navbar-brand{:href => root_url} Samsoc Manga Library
+    %ul.nav.navbar-nav
+      %li.active
+        %a{:href => root_url} samsoc
+      %li
+        %a{:href => contact_url} contact
+      %li
+        %a{:href => mangas_url} database
+    %ul.nav.navbar-nav.navbar-right
+      %li
+        %a{:href => "#"}
+          %span.glyphicon.glyphicon-user
+          Sign Up
+      %li
+        %a{:href => "#"}
+          %span.glyphicon.glyphicon-log-in
+          Login

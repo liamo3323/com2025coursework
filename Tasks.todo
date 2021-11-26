@@ -1,0 +1,35 @@
+TO DO LIST FOR COM2025  COURSEWORK: 
+    
+    1. Views (30%):
+        ✔ home page. @done (15/11/2021, 15:35:04)
+        ✔ contact page with contact form. @done (16/11/2021, 19:47:01)
+        ☐ Resource pages for all of your appropriate model resources. Only provide
+        routes and actions to all of your resource paths if they are needed.
+        ☐ All views conforming to best practice guidelines for HTML5 and CSS
+        ✔ Partials used to ensure that each page has a standardised header and footer. @done (15/11/2021, 22:39:44)
+        ☐ jQuery used where appropriate to assist in providing a good user experience
+        (for example, checking that form fields are not empty prior to submission, if they are required).
+    2. Controllers (20%):
+        ✔ controller to handle your home and contact page. @done (15/11/2021, 22:08:44)
+        ☐ Controllers for each of your model resources with an appropriate use of   strong parameters.
+        ☐ Only actions for those routes which are exposed.
+        ☐ Appropriate tests for each of your controller actions, which all pass. You
+        should also test basic view content within your controller tests.
+    3. Mailer (10%):
+        ☐ A mailer to handle your contact request. This does not need to be linked to
+        an SMTP server.
+        ☐ Appropriate previews and tests for the mailer, which all pass.
+    4. Models (30%):
+        ☐ A series of database migrations that you have used to build your application,
+        with the schema including appropriate fields, data types, defaults, nullability
+        and indices.
+        ☐ At least three model classes which provide appropriate validations,
+        associations and scopes.
+        ☐ Appropriate tests for each of your models, which all pass.
+    5. Configuration (10%):
+        ☐ Appropriate environment configuration for your application, including
+        gems and environment settings.
+        ☐ Only the required routes needed for your application.
+        ☐ The use of localised strings throughout your application.
+        ☐ A git repository showing your development through regular commits.
+        ☐ Appropriate use of comments and code style throughout.
