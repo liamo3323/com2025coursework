@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: %i[ show edit update destroy ]
-
+  before_action :set_review, only: [:new, :create]
   # GET /reviews or /reviews.json
   def index
     @reviews = Review.all
@@ -12,7 +12,8 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
+    @manga = Manga.find_by!(id: request.query_parameters["manga_id"])
+    @review = Review.new(manga: @manga)
   end
 
   # GET /reviews/1/edit
@@ -59,7 +60,7 @@ class ReviewsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_review
-      @review = Review.find(params[:id])
+      @manga = Manga.find_by(id:params[:manga_id]) || Manga.find(task_params[:note_id])
     end
 
     # Only allow a list of trusted parameters through.

@@ -19,6 +19,8 @@
   %b Value:
   = @manga.value
 
-= link_to 'Edit', edit_manga_path(@manga)
-\|
-= link_to 'Back', mangas_path
+%p= link_to 'Add Review', new_review_path(manga_id: @manga)
+%br
+%p= link_to 'Edit', edit_manga_path(manga_id: @manga)
+%br
+%p= link_to 'Back', mangas_path
