@@ -6,7 +6,6 @@
       %tr
         %th Title
         %th Availability
-        %th Volume
         %th Owner
         %th Borrower
         %th Value
@@ -17,9 +16,8 @@
     %tbody
       - @mangas.each do |manga|
         %tr
-          %td= manga.title
+          %td= "#{manga.title} Volume #{manga.volumeNum}"
           %td= manga.availability
-          %td= manga.volumeNum
           %td= manga.owner
           %td= manga.borrower
           %td= "£#{manga.value}"
