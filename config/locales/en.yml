@@ -1,42 +1,30 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  app_title: SAMsoc Manga Library
+  app_title: SAMsoc Manga Database
   app_description: This is where the Surrey Anime and Manga society keep their manga database
 
   home:
     home:
-      title: SAMsoc Manga Library 
-      welcome: Welcome to the SAMsoc Manga library site!
+      title: SAMsoc Manga Database 
+      introduction: Surrey Anime and Manga Society was established in 2006, and since then we have blossomed into a wonderful community of avid anime and manga enjoyers. Our society is open to everyone, from complete beginners to seasoned pros.
+      
+      regularsessionheader: Regular Sessions
+      regularsessiondescription: Every Wednesday at 6pm we meet at Lecure Theatre G to watch anime. At the start of term, we vote on which shows we would like to watch and throughout the semester we watch two short core shows and one long core. We also have a break in the middle of the session so we can grab food and play games together! Favourites from last year include Kahoot quizzes, ‘Just a Minute!’, controversial debates and drawing challenges. These games, whilst being very fun to play, also provide a good opportunity to bond with the other members, something we strongly encourage here at SAMsoc.
+
+      eventheader: Social Sessions
+      eventdescription: Although we are an anime and manga society, we are also so much more! At the weekends, we host a wide range of events, which include
+      event1: Karaoke evenings
+      event2: Games nights
+      event3: Film seshes
+      event4: Collaborations with other societies (e.g. Dodgeball, Japanese society, Korean society and the video games society- just to name a few!)
+      event5: Bake sales
+      event6: Charity concerts
+      event7: Naruto running around campus (for charity)
+      event8: Quiz nights
+      event9: Collaborations with other university anime societies
+      event10: Online social events
+
+      conclusion: We are excited to bring back our favourite events this year, as well as adding some new ones to the mix! Follow our social media pages to keep up to date with our events, and make sure to join our Discord (the link will become available after you sign up on the union website).   
+
 
     contact:
       title: Contact Us Page

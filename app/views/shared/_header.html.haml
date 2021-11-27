@@ -1,16 +1,17 @@
-
-
 %nav.navbar.navbar-inverse
   .container-fluid
     .navbar-header
-      %a.navbar-brand{:href => root_url} Samsoc Manga Library
+     
+      %a.navbar-brand{:href => root_url} 
+        %img(src="/logo.png")
+    
     %ul.nav.navbar-nav
-      %li.active
-        %a{:href => root_url} samsoc
       %li
         %a{:href => contact_url} contact
       %li
-        %a{:href => mangas_url} database
+        %a{:href => mangas_url} Manga
+      %li
+        %a{:href => "#" } BLANK
     %ul.nav.navbar-nav.navbar-right
       %li
         %a{:href => "#"}
