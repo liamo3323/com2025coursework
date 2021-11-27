@@ -7,7 +7,7 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
 
     assert_select 'title', 'Samsoc'
     assert_select 'h1', 'SAMsoc Manga Library'
-    assert_select 'p', 'Welcome to the SAMsoc Manga library site!'
+    assert_select 'p', ' Surrey Anime and Manga Society was established in 2006, and since then we have blossomed into a wonderful community of avid anime and manga enjoyers. Our society is open to everyone, from complete beginners to seasoned pros.'
   end
 
   test "should get contact" do

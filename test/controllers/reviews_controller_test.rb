@@ -3,6 +3,7 @@ require 'test_helper'
 class ReviewsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @review = reviews(:one)
+    @manga = mangas(:one)
   end
 
   test "should get index" do
@@ -17,10 +18,12 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create review" do
     assert_difference('Review.count') do
-      post reviews_url, params: { review: { manga_id: @review.manga_id, title: @review.title } }
+      # [temp] post reviews_url, params: { review: { manga_id: @review.manga_id, title: @review.title } }
+      post :create, task: { manga_id: @manga, title: @review.title }
     end
 
-    assert_redirected_to review_url(Review.last)
+    # [temp] assert_redirected_to review_url(Review.last)
+    assert_redirected_to task_path(assigns(:review))
   end
 
   test "should show review" do
@@ -34,8 +37,12 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update review" do
-    patch review_url(@review), params: { review: { manga_id: @review.manga_id, title: @review.title } }
-    assert_redirected_to review_url(@review)
+    # [temp] patch review_url(@review), params: { review: { manga_id: @review.manga_id, title: @review.title } }
+    # [temp] assert_redirected_to review_url(@review)
+  
+    patch :update, id: @review, review: { manga_id: @manga, title: @review.title }#
+    assert_redirected_to task_path(assigns(:task))
+
   end
 
   test "should destroy review" do
