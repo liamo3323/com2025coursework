@@ -60,6 +60,17 @@ nav.navbar
     height: 100%;
     border: 3px
 }
+
+.container-center3
+{
+    align-items: center;
+    font-size: $size;
+    background-color: $containercolor;
+    padding: 10px;
+    width: 350px;
+    margin: 0 auto;
+}
+
 .glyphicon 
 {
     font-size: 16px;

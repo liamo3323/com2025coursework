@@ -1,26 +1,26 @@
-%p#notice= notice
+.container-center3
 
-%p
-  %b Title:
-  = @manga.title
-%p
-  %b Availability:
-  = @manga.availability
-%p
-  %b Volumenum:
-  = @manga.volumeNum
-%p
-  %b Owner:
-  = @manga.owner
-%p
-  %b Borrower:
-  = @manga.borrower
-%p
-  %b Value:
-  = @manga.value
+  %p#notice= notice
 
-%p= link_to 'Add Review', new_review_path(manga_id: @manga)
-%br
-%p= link_to 'Edit', edit_manga_path(manga_id: @manga)
-%br
-%p= link_to 'Back', mangas_path
+  %p
+    %b Title:
+    = @manga.title
+  %p
+    %b Availability:
+    = @manga.availability
+  %p
+    %b Volumenum:
+    = @manga.volumeNum
+  %p
+    %b Owner:
+    = @manga.owner
+  %p
+    %b Borrower:
+    = @manga.borrower
+  %p
+    %b Value:
+    = "£#{@manga.value}"
+
+  %p= link_to 'Add Review', new_review_path(manga_id: @manga)
+  %p= link_to 'Edit', edit_manga_path(manga_id: @manga)
+  %p= link_to 'Back', mangas_path
