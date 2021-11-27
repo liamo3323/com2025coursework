@@ -1,31 +1,31 @@
-%h1 Listing mangas
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Availability
-      %th Volumenum
-      %th Owner
-      %th Borrower
-      %th Value
-      %th
-      %th
-      %th
-
-  %tbody
-    - @mangas.each do |manga|
+.container-center2
+  %h1 Listing mangas
+  %br
+  %table
+    %thead
       %tr
-        %td= manga.title
-        %td= manga.availability
-        %td= manga.volumeNum
-        %td= manga.owner
-        %td= manga.borrower
-        %td= manga.value
-        %td= link_to 'Show', manga
-        %td= link_to 'Edit', edit_manga_path(manga)
-        %td= link_to 'Destroy', manga, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Title
+        %th Availability
+        %th Volume
+        %th Owner
+        %th Borrower
+        %th Value
+        %th
+        %th
+        %th
 
-%br
+    %tbody
+      - @mangas.each do |manga|
+        %tr
+          %td= manga.title
+          %td= manga.availability
+          %td= manga.volumeNum
+          %td= manga.owner
+          %td= manga.borrower
+          %td= "£#{manga.value}"
+          %td= link_to 'Show', manga
+          %td= link_to 'Edit', edit_manga_path(manga)
+          %td= link_to 'Destroy', manga, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Manga', new_manga_path
+  %br
+    = link_to 'New Manga', new_manga_path
