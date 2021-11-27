@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 2021_11_26_231044) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "manga_id"
-    t.string "title"
+    t.integer "manga_id", null: false
+    t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manga_id"], name: "index_reviews_on_manga_id"
