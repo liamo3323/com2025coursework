@@ -4,7 +4,7 @@ class MangasController < ApplicationController
 
   # GET /mangas or /mangas.json
   def index
-    @mangas = Manga.all
+    @mangas = Manga.user_mangas(current_user)
   end
 
   # GET /mangas/1 or /mangas/1.json
@@ -23,6 +23,7 @@ class MangasController < ApplicationController
   # POST /mangas or /mangas.json
   def create
     @manga = Manga.new(manga_params)
+    @manga.user = current_user
 
     respond_to do |format|
       if @manga.save

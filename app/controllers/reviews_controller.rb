@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!
   # GET /reviews or /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = Review.user_reviews(current_user)
   end
 
   # GET /reviews/1 or /reviews/1.json
