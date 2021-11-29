@@ -1,5 +1,6 @@
 class MangasController < ApplicationController
   before_action :set_manga, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /mangas or /mangas.json
   def index
