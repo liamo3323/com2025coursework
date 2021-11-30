@@ -53,15 +53,15 @@ nav.navbar
     padding: 10px;
     width: 75%;
     margin: 0 auto;
-}
-
-.container-center2 tr th
-{
-    width: 100%;
-    height: 100%;
-    border: 3px;
-    padding: 7.5px;
-    text-align: le;
+    tr th 
+    {
+        width: 100%;
+        height: 100%;
+        border: 3px;
+        padding: 7.5px;
+        text-align: left;
+    }
+    
 }
 
 .container-center3
@@ -92,6 +92,10 @@ nav.navbar
     margin-left: 0px;
 }
 
+.field
+{
+    padding-bottom: 10px;
+}
 
 
 p  
