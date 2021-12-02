@@ -1,6 +1,9 @@
- @import  "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
+ @import url(https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+ @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+ 
  $font: 'Times New Roman', 'Times', serif;
  $color: #fc575c;
  $containercolor: #fbbfc1;
@@ -99,11 +102,6 @@ nav.navbar
 
 
 p  
-{
-    font-size: $size;
-}
-
-li 
 {
     font-size: $size;
 }
