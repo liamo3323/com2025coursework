@@ -5,7 +5,7 @@ class AddUsersToMangas < ActiveRecord::Migration[5.2]
     user = User.first
 
     Manga.all.each do |manga|
-      manga.user_id = manga.id
+      manga.user_id = user.id
       manga.save!
     end 
 

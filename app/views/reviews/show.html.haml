@@ -1,13 +1,12 @@
 
- #%p#notice= notice
+.container-center3
+  %p
+    %b Manga Title:
+    = @manga.title
+  %p
+    %b Review:
+    = @review.title
 
-%p
-  %b Manga:
-  = @review.manga
-%p
-  %b Title:
-  = @review.title
-
-= link_to 'Edit', edit_review_path(@review)
-\|
-= link_to 'Back', reviews_path
+  = link_to 'Edit', edit_review_path(@review)
+  \|
+  = link_to 'Back', reviews_path

@@ -7,7 +7,9 @@
           %li= message
 
   .field
-    %p= " Title: #{@review.manga.title} Volume #{@review.manga.volumeNum}"
+    %p= " Title: #{@review.manga.title}"
+
+    = f.hidden_field :manga_id
 
     = f.text_field :title
   .actions

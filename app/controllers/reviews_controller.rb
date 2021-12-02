@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: %i[ show edit update destroy ]
-  before_action :set_review, only: [:new, :create]
+  before_action :set_manga, only: [:new, :create]
   before_action :authenticate_user!
   # GET /reviews or /reviews.json
   def index
@@ -60,8 +60,13 @@ class ReviewsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_manga
+      @manga = Manga.find_by(id:params[:manga_id]) || Manga.find(review_params[:manga_id])
+    end
+
     def set_review
-      @manga = Manga.find_by(id:params[:manga_id]) || Manga.find(task_params[:note_id])
+      @review = Review.find_by(id:params[:id]) || Review.find(review_params[:id])
+      @manga = @review.manga
     end
 
     # Only allow a list of trusted parameters through.
