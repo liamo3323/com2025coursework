@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  user: one
   title: Manga 1
   LatestChapter: 10
   Status: Finished
@@ -8,6 +9,7 @@ one:
   Genre: Adventure
 
 two:
+  user: two
   title: Manga 2
   LatestChapter: 20
   Status: Airing

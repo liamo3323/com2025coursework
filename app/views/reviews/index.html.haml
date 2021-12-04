@@ -12,7 +12,7 @@
   
     %tbody
       - @reviews.each do |review|
-        %tr {id: "review_#{review.id}"}
+        %tr{id: "review_#{review.id}"}
           %td= review.manga.title
           %td= review.title
           %td= link_to 'Show', review

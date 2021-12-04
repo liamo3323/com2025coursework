@@ -2,6 +2,10 @@ require 'test_helper'
 
 class MangaTest < ActiveSupport::TestCase
   
+  setup do
+    @user = users(:one)
+  end
+
   test 'should not save empty manga' do
     manga = Manga.new
     manga.save
@@ -16,6 +20,7 @@ class MangaTest < ActiveSupport::TestCase
     manga.State = "Airing"
     manga.Genre = "Finished"
     manga.Published = 2020-2-22
+    manga.user = @user
 
     manga.save
     assert manga.valid?
@@ -29,6 +34,7 @@ class MangaTest < ActiveSupport::TestCase
     manga1.State = "Airing"
     manga1.Genre = "Finished"
     manga1.Published = 2020-2-22
+    manga1.user = @user
     manga1.save
     assert manga1.valid?
 
@@ -38,6 +44,7 @@ class MangaTest < ActiveSupport::TestCase
     manga2.State = "Airing"
     manga2.Genre = "Finished"
     manga2.Published = 2020-2-22
+    manga2.user = @user
     manga2.save
     assert manga2.valid?
   end

@@ -54,6 +54,7 @@ class MangasController < ApplicationController
     @manga.destroy
     respond_to do |format|
       format.html { redirect_to mangas_url, notice: "Manga was successfully destroyed." }
+      format.js { flash[:notice] = 'manga was successfully destroyed.'}
       format.json { head :no_content }
     end
   end

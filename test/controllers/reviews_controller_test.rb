@@ -1,9 +1,13 @@
 require 'test_helper'
 
 class ReviewsControllerTest < ActionDispatch::IntegrationTest
+  include Devise::TestHelpers 
+
   setup do
     @review = reviews(:one)
     @manga = mangas(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
