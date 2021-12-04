@@ -8,7 +8,7 @@
 
   .field
     %p= f.label :title
-    %p= f.text_field :title
+    %p= f.collection_select :title, Manga_lists.all, :name, :name
   .field
     %p= f.label :LatestChapter
     %p= f.number_field :LatestChapter

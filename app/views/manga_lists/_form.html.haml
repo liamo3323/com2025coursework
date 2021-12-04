@@ -1,0 +1,13 @@
+= form_for @manga_list do |f|
+  - if @manga_list.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@manga_list.errors.count, "error")} prohibited this manga_list from being saved:"
+      %ul
+        - @manga_list.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .actions
+    = f.submit 'Save'

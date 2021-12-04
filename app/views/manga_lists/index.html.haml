@@ -1,0 +1,22 @@
+.container-center4
+  %h1 Listing manga lists
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th
+        %th
+        %th
+
+    %tbody
+      - @manga_list.each do |manga_list|
+        %tr
+          %td= manga_list.name
+          %td= link_to 'Show', manga_list
+          %td= link_to 'Edit', edit_manga_list_path(manga_list)
+          %td= link_to 'Destroy', manga_list, method: :delete, data: { confirm: 'Are you sure?' }
+
+  %br
+
+  = link_to 'New Manga list', new_manga_list_path

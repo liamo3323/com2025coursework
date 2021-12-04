@@ -10,23 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_04_164144) do
+ActiveRecord::Schema.define(version: 2021_12_04_200316) do
+
+  create_table "manga_lists", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "mangas", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
-    t.integer "LatestChapter", null: false
-    t.string "Status", null: false
-    t.string "Genre", null: false
-    t.date "Published", null: false
+    t.integer "LatestChapter"
+    t.string "Status"
+    t.string "Genre"
+    t.date "Published"
     t.index ["user_id"], name: "index_mangas_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "manga_id", null: false
-    t.string "title", null: false
+    t.integer "manga_id"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["manga_id"], name: "index_reviews_on_manga_id"
