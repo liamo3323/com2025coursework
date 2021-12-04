@@ -17,7 +17,7 @@ class MangasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create manga" do
     assert_difference('Manga.count') do
-      post mangas_url, params: { manga: { availability: @manga.availability, borrower: @manga.borrower, owner: @manga.owner, title: @manga.title, value: @manga.value, volumeNum: @manga.volumeNum } }
+      post :create, note: { title: @manga.title, LatestChapter: @manga.LatestChapter, Status: @manga.Status, Published: @manga.Published, Genre: @manga.Genre + " create" }
     end
 
     assert_redirected_to manga_url(Manga.last)

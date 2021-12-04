@@ -19,7 +19,7 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
   test "should create review" do
     assert_difference('Review.count') do
       # [temp] post reviews_url, params: { review: { manga_id: @review.manga_id, title: @review.title } }
-      post :create, task: { manga_id: @manga, title: @review.title }
+      post :create, review: { manga_id: @manga, title: @review.title }
     end
 
     # [temp] assert_redirected_to review_url(Review.last)
@@ -40,7 +40,7 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
     # [temp] patch review_url(@review), params: { review: { manga_id: @review.manga_id, title: @review.title } }
     # [temp] assert_redirected_to review_url(@review)
   
-    patch :update, id: @review, review: { manga_id: @manga, title: @review.title }#
+    patch :update, id: @review, review: { manga_id: @manga, title: @review.title }
     assert_redirected_to task_path(assigns(:task))
 
   end

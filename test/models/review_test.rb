@@ -3,10 +3,10 @@ require 'test_helper'
 class ReviewTest < ActiveSupport::TestCase
   
   setup do
-    @note = mangas(:one) 
+    @manga = mangas(:one) 
   end
 
-  test 'should not save empty review' do
+  test 'should not save empty review' do # should not save an empty review without any title
     review = Review.new #creates a new review, 
     review.save #saves it,  
     refute review.valid? #then checks if its valid
@@ -15,7 +15,7 @@ class ReviewTest < ActiveSupport::TestCase
   test ' should save valid review' do
     review = Review.new #creates new task
     review.title = 'My Review' # gives it a required title
-    review.note = @manga # gives it a requred manga 
+    review.manga = @manga # gives it a requred manga 
     review.save # saves values
     assert review.valid? # then checks if its valid
   end

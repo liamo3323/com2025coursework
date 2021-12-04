@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  availability: MyString
-  volumeNum: 1
-  owner: MyString
-  borrower: MyString
-  value: 1
+  title: Manga 1
+  LatestChapter: 10
+  Status: Finished
+  Published: 2018-3-4 
+  Genre: Adventure
 
 two:
-  title: MyString
-  availability: MyString
-  volumeNum: 1
-  owner: MyString
-  borrower: MyString
-  value: 1
+  title: Manga 2
+  LatestChapter: 20
+  Status: Airing
+  Published: 2014-3-1
+  Genre: Action
