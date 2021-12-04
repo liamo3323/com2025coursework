@@ -5,10 +5,10 @@
     %thead
       %tr
         %th Title
-        %th Availability
-        %th Owner
-        %th Borrower
-        %th Value
+        %th LatestChapter
+        %th Status
+        %th Published
+        %th Genre
         %th
         %th
         %th
@@ -16,11 +16,11 @@
     %tbody
       - @mangas.each do |manga|
         %tr
-          %td= "#{manga.title} Volume #{manga.volumeNum}"
-          %td= manga.availability
-          %td= manga.owner
-          %td= manga.borrower
-          %td= "£#{manga.value}"
+          %td= manga.title
+          %td= manga.LatestChapter
+          %td= manga.Status
+          %td= manga.Published
+          %td= manga.Genre
           %td= link_to 'Show', manga
           %td= link_to 'Edit', edit_manga_path(manga)
           %td= link_to 'Destroy', manga, method: :delete, data: { confirm: 'Are you sure?' }

@@ -4,7 +4,7 @@ en:
 
   home:
     home:
-      title: SAMsoc Manga Database 
+      title: SAMsoc Manga Database
       introduction: Surrey Anime and Manga Society was established in 2006, and since then we have blossomed into a wonderful community of avid anime and manga enjoyers. Our society is open to everyone, from complete beginners to seasoned pros.
       
       regularsessionheader: Regular Sessions
@@ -28,7 +28,7 @@ en:
 
     contact:
       title: Contact Us
-      contact_us: Fill in the following information to get in touch with us! 
+      contact_us: Fill in the following information to get in touch with us!
 
       name: "Name:"
       enter_name: Enter your name

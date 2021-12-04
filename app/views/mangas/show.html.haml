@@ -3,20 +3,17 @@
     %b Title:
     = @manga.title
   %p
-    %b Availability:
-    = @manga.availability
+    %b Latest Chapter:
+    = @manga.LatestChapter
   %p
-    %b Volumenum:
-    = @manga.volumeNum
+    %b Status:
+    = @manga.Status
   %p
-    %b Owner:
-    = @manga.owner
+    %b Publisher:
+    = @manga.Published
   %p
-    %b Borrower:
-    = @manga.borrower
-  %p
-    %b Value:
-    = "£#{@manga.value}"
+    %b Genre:
+    = @manga.Genre
 
   %p= link_to 'Add Review', new_review_path(manga_id: @manga)
   %p= link_to 'Edit', edit_manga_path(manga_id: @manga)

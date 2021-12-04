@@ -10,18 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_203521) do
+ActiveRecord::Schema.define(version: 2021_12_03_215925) do
 
   create_table "mangas", force: :cascade do |t|
-    t.string "title"
-    t.string "availability"
-    t.integer "volumeNum"
-    t.string "owner"
-    t.string "borrower"
-    t.integer "value"
+    t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id", null: false
+    t.integer "LatestChapter" 
+    t.string "Status"
+    t.datetime "Published"
+    t.string "Genre"
     t.index ["user_id"], name: "index_mangas_on_user_id"
   end
 
