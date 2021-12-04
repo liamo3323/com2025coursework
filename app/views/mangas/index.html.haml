@@ -15,7 +15,7 @@
 
     %tbody
       - @mangas.each do |manga|
-        %tr
+        %tr{id: "manga_#{manga.id}"}
           %td= manga.title
           %td= manga.LatestChapter
           %td= manga.Status
@@ -23,7 +23,7 @@
           %td= manga.Genre
           %td= link_to 'Show', manga
           %td= link_to 'Edit', edit_manga_path(manga)
-          %td= link_to 'Destroy', manga, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to 'Destroy', manga, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true
 
   %br
     = link_to 'New Manga', new_manga_path

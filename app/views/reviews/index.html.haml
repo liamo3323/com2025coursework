@@ -12,12 +12,12 @@
   
     %tbody
       - @reviews.each do |review|
-        %tr
+        %tr {id: "review_#{review.id}"}
           %td= review.manga.title
           %td= review.title
           %td= link_to 'Show', review
           %td= link_to 'Edit', edit_review_path(review)
-          %td= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' }, :remote => true
   
   %br
 
