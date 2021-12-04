@@ -10,19 +10,16 @@
     %p= f.label :title
     %p= f.text_field :title
   .field
-    %p= f.label :availability
-    %p= f.text_field :availability
+    %p= f.label :LatestChapter
+    %p= f.number_field :LatestChapter
   .field
-    %p= f.label :volumeNum
-    %p= f.number_field :volumeNum
+    %p= f.label :Status
+    %p= f.text_field :Status
   .field
-    %p= f.label :owner
-    %p= f.text_field :owner
+    %p= f.label :Genre
+    %p= f.text_field :Genre
   .field
-    %p= f.label :borrower
-    %p= f.text_field :borrower
-  .field
-    %p= f.label :value
-    %p= f.number_field :value
+    %p= f.label :Published
+    %p= f.date_field :Published
   .actions
     %p= f.submit 'Save'
