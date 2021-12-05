@@ -5,7 +5,6 @@ class MangasController < ApplicationController
   # GET /mangas or /mangas.json
   def index
     @mangas = Manga.user_mangas(current_user)
-    @manga_lists = Manga_lists.all
   end
 
   # GET /mangas/1 or /mangas/1.json

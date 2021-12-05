@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
+  id: 1
+  user_id: 1
   title: Manga 1
   LatestChapter: 10
   Status: Finished
-  Published: 2018-3-4
+  Published: 2018-3-4 
   Genre: Adventure
 
 two:
-  user: two
+  id: 2
+  user_id: 2
   title: Manga 2
   LatestChapter: 20
   Status: Airing

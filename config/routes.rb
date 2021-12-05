@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :manga_lists
   devise_for :users
   # Resource Paths
   resources :reviews
   resources :mangas
-  resources :manga_lists
   root 'home#home' # Homepage is the root as expected
 
   get 'response', to: 'home#responsive'
