@@ -21,7 +21,7 @@ include Devise::TestHelpers
 
   test "should create manga" do
     assert_difference('Manga.count') do
-      post :create, note: { title: @manga.title, LatestChapter: @manga.LatestChapter, Status: @manga.Status, Published: @manga.Published, Genre: @manga.Genre + " create" }
+      post :create, manga: { title: @manga.title, LatestChapter: @manga.LatestChapter, Status: @manga.Status, Published: @manga.Published, Genre: @manga.Genre + " create" }
     end
 
     assert_redirected_to manga_url(Manga.last)

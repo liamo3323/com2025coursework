@@ -16,8 +16,8 @@ class MangaListsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create manga_list" do
-    assert_difference('MangaList.count') do
-      post manga_lists_url, params: { manga_list: { name: @manga_list.name } }
+    assert_difference('Manga_List.count') do
+      post :create, manga_list: { name: @manga_list.name  + " create" }
     end
 
     assert_redirected_to manga_list_url(MangaList.last)
