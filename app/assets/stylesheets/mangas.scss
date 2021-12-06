@@ -1,3 +1,23 @@
 // Place all the styles related to the Mangas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-center2
+{
+    font-size: $size;
+    background-color: $containercolor;
+    padding: 20px;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 20px;
+    tr th 
+    {
+        width: 100%;
+        height: 100%;
+        border: 3px;
+        padding: 7.5px;
+        text-align: left;
+    }
+
+    
+}
