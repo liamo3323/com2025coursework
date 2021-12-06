@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  mangaID: 1
+  id: 1
+  manga_id: 1
   title: MyReview
 
 two:
-  mangaID: 2
+  id: 2
+  manga_id: 2
   title: MyReview

@@ -6,7 +6,7 @@ class ContactMailerTest < ActionMailer::TestCase
     
     mail = ContactMailer.contact_email("matthew@email.com", "Matthew Casey", "1234567890", @message = "Hello")
     
-    aassert_equal ['info@samsoc.com'], mail.to
+    assert_equal ['info@samsoc.com'], mail.to
     assert_equal ['info@samsoc.com'], mail.from
   end
 end

@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ReviewsControllerTest < ActionDispatch::IntegrationTest
-  include Devise::TestHelpers 
+  include Devise::Test::IntegrationHelpers
 
   setup do
     @review = reviews(:one)
@@ -16,18 +16,16 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_review_url, params: {task: {manga_id: @manga.id}}
+    get new_review_url(:manga_id => @manga.id)#, params: {review: {manga_id: @manga.id}}
     assert_response :success
   end
 
   test "should create review" do
     assert_difference('Review.count') do
-      # [temp] post reviews_url, params: { review: { manga_id: @review.manga_id, title: @review.title } }
-      post :create, review: { manga_id: @manga, title: @review.title }
+      post reviews_url, params: { review: { manga_id: @review.manga_id, title: @review.title } }
     end
 
-    # [temp] assert_redirected_to review_url(Review.last)
-    assert_redirected_to task_path(assigns(:review))
+    assert_redirected_to review_url(Review.last)
   end
 
   test "should show review" do
@@ -41,11 +39,8 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update review" do
-    # [temp] patch review_url(@review), params: { review: { manga_id: @review.manga_id, title: @review.title } }
-    # [temp] assert_redirected_to review_url(@review)
-  
-    patch :update, id: @review, review: { manga_id: @manga, title: @review.title }
-    assert_redirected_to task_path(assigns(:task))
+    patch review_url(@review), params: { review: { manga_id: @review.manga_id, title: @review.title } }
+    assert_redirected_to review_path(assigns(:review))
 
   end
 

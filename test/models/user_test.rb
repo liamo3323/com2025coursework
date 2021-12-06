@@ -11,7 +11,7 @@ class UserTest < ActiveSupport::TestCase
   test 'should save valid user' do
     user = User.new
     user.email='bob@email.com'
-    user.encrypted_password='12345678'
+    user.password='12345678'
     user.save
     assert user.valid?
   end

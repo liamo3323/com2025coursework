@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MangasControllerTest < ActionDispatch::IntegrationTest
-include Devise::TestHelpers
+  include Devise::Test::IntegrationHelpers
 
   setup do
     @manga = mangas(:one)
@@ -21,7 +21,7 @@ include Devise::TestHelpers
 
   test "should create manga" do
     assert_difference('Manga.count') do
-      post :create, note: { title: @manga.title, LatestChapter: @manga.LatestChapter, Status: @manga.Status, Published: @manga.Published, Genre: @manga.Genre + " create" }
+      post mangas_url, params: { manga: { LatestChapter: @manga.LatestChapter, Status: @manga.Status, Published: @manga.Published, Genre: @manga.Genre,  title: @manga.title + " create" } }
     end
 
     assert_redirected_to manga_url(Manga.last)
@@ -38,7 +38,7 @@ include Devise::TestHelpers
   end
 
   test "should update manga" do
-    patch manga_url(@manga), params: { manga: { availability: @manga.availability, borrower: @manga.borrower, owner: @manga.owner, title: @manga.title, value: @manga.value, volumeNum: @manga.volumeNum } }
+    patch manga_url(@manga), params: { manga: { title: @manga.title, LatestChapter: @manga.LatestChapter, Status: @manga.Status, Published: @manga.Published, Genre: @manga.Genre } }
     assert_redirected_to manga_url(@manga)
   end
 
